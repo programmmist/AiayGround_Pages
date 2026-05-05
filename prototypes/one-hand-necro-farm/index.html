@@ -2,41 +2,95 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>한 손 네크로 농장 · Prototype Slot</title>
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: #10151d;
-        color: #e6edf3;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      section {
-        width: min(720px, calc(100% - 32px));
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 24px;
-        padding: 28px;
-        background: #161b22;
-      }
-      h1 { margin-top: 0; }
-      p { color: #aab6c2; line-height: 1.65; }
-      a { color: #76e4a6; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>한 손 네크로 농장</title>
+    <meta name="description" content="수확/부패 선택 검증용 5분 브라우저 프로토타입" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section>
-      <h1>한 손 네크로 농장</h1>
-      <p>
-        여기는 첫 번째 검증용 프로토타입이 들어갈 자리입니다.
-        현재는 GitHub Pages 배포 경로가 정상 동작하는지 확인하기 위한 슬롯 페이지입니다.
-      </p>
-      <p>
-        다음 단계에서 3x3 농장 그리드, 수확/부패 선택, 5분 결과 화면을 이 경로에 구현합니다.
-      </p>
-      <p><a href="../../">메인 페이지로 돌아가기</a></p>
-    </section>
+    <main id="app" class="app">
+      <section id="startScreen" class="screen screen-active">
+        <div class="panel intro-panel">
+          <p class="eyebrow">5분 선택 루프 검증</p>
+          <h1>한 손 네크로 농장</h1>
+          <p class="lead">
+            작물을 바로 수확해 골드를 얻을지, 더 기다려 부패시킨 뒤 해골로 바꿀지 결정합니다.
+            이번 버전의 목적은 전체 게임 완성이 아니라 이 선택이 짧은 플레이 동안 의미 있게 느껴지는지 확인하는 것입니다.
+          </p>
+          <div class="goal-card">
+            <strong>검증 질문</strong>
+            <span>수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단으로 느껴지는가?</span>
+          </div>
+          <ul class="rules">
+            <li>빈 칸을 누르면 씨앗을 심습니다. 비용은 1 골드입니다.</li>
+            <li>성장한 작물은 수확하거나, 잠시 기다려 부패시킨 뒤 해골로 바꿀 수 있습니다.</li>
+            <li>수확은 골드를 늘리고, 해골은 1분마다 오는 웨이브를 막습니다.</li>
+            <li>5분 생존하거나 체력이 0이 되면 결과가 표시됩니다.</li>
+          </ul>
+          <button id="startButton" class="primary-button">검증 시작</button>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">one-hand necro farm</p>
+            <h1>한 손 네크로 농장</h1>
+          </div>
+          <button id="restartTopButton" class="ghost-button">재시작</button>
+        </header>
+
+        <section class="hud panel">
+          <div class="hud-item"><span>시간</span><strong id="timeText">05:00</strong></div>
+          <div class="hud-item"><span>다음 웨이브</span><strong id="waveText">01:00</strong></div>
+          <div class="hud-item"><span>체력</span><strong id="healthText">10</strong></div>
+          <div class="hud-item"><span>골드</span><strong id="goldText">6</strong></div>
+          <div class="hud-item"><span>해골</span><strong id="skeletonText">0</strong></div>
+        </section>
+
+        <section class="play-area">
+          <div class="panel board-panel">
+            <div class="board-header">
+              <div>
+                <h2>농장 3x3</h2>
+                <p id="hintText">빈 칸을 눌러 씨앗을 심으세요.</p>
+              </div>
+            </div>
+            <div id="grid" class="grid" aria-label="3x3 농장 그리드"></div>
+          </div>
+
+          <aside class="panel side-panel">
+            <h2>웨이브 압박</h2>
+            <div class="lane">
+              <div id="enemyMarker" class="enemy-marker">👾</div>
+            </div>
+            <p id="waveLog" class="wave-log">첫 웨이브까지 준비하세요.</p>
+            <h2>선택 기록</h2>
+            <dl class="stats-list">
+              <div><dt>심기</dt><dd id="plantedText">0</dd></div>
+              <div><dt>수확</dt><dd id="harvestText">0</dd></div>
+              <div><dt>부패 선택</dt><dd id="rotText">0</dd></div>
+              <div><dt>막은 웨이브</dt><dd id="clearedText">0</dd></div>
+            </dl>
+          </aside>
+        </section>
+      </section>
+
+      <section id="resultScreen" class="screen">
+        <div class="panel result-panel">
+          <p class="eyebrow">playtest result</p>
+          <h1 id="resultTitle">결과</h1>
+          <p id="resultSummary" class="lead"></p>
+          <div id="resultStats" class="result-grid"></div>
+          <label class="result-json-label" for="resultJson">결과 JSON</label>
+          <textarea id="resultJson" readonly></textarea>
+          <div class="actions">
+            <button id="copyResultButton" class="primary-button">결과 복사</button>
+            <button id="retryButton" class="ghost-button">다시 검증</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./game.js" defer></script>
   </body>
 </html>

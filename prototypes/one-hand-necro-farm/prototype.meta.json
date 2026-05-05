@@ -1,0 +1,25 @@
+{
+  "id": "one-hand-necro-farm",
+  "title": "한 손 네크로 농장",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "source_iteration": "iteration-live-001",
+  "source_candidate_score": 78,
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단으로 느껴지는가?",
+  "initial_scope": {
+    "run_length_seconds": 300,
+    "grid": "3x3",
+    "core_choices": ["harvest for gold", "wait for rot then raise skeleton"],
+    "pressure": "wave every 60 seconds",
+    "result_signals": ["harvest count", "rot choice count", "skeletons raised", "waves cleared", "damage taken"]
+  },
+  "not_in_scope": [
+    "4x4 grid",
+    "3+ crop types",
+    "2+ monster types",
+    "meta progression",
+    "polished art",
+    "server-side telemetry"
+  ]
+}
