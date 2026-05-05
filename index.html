@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AiayGround Pages</title>
+    <meta name="description" content="hm_game 검증용 웹 프로토타입 배포 페이지" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0e1117;
+        --panel: #161b22;
+        --panel-2: #1f2630;
+        --text: #e6edf3;
+        --muted: #9aa7b3;
+        --accent: #76e4a6;
+        --accent-2: #7cc7ff;
+        --danger: #ffb86b;
+        --border: rgba(255,255,255,0.1);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(118, 228, 166, 0.14), transparent 32rem),
+          radial-gradient(circle at bottom right, rgba(124, 199, 255, 0.12), transparent 30rem),
+          var(--bg);
+        color: var(--text);
+      }
+      main {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+      .hero {
+        border: 1px solid var(--border);
+        background: linear-gradient(145deg, rgba(22,27,34,0.92), rgba(31,38,48,0.86));
+        border-radius: 28px;
+        padding: clamp(24px, 5vw, 48px);
+        box-shadow: 0 28px 80px rgba(0,0,0,0.35);
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 12px 0 12px;
+        font-size: clamp(2.2rem, 8vw, 5rem);
+        line-height: 0.95;
+      }
+      p {
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+      .status {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin: 28px 0;
+      }
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.035);
+        padding: 16px;
+      }
+      .label {
+        color: var(--muted);
+        font-size: 0.82rem;
+        margin-bottom: 8px;
+      }
+      .value {
+        color: var(--text);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .value.ok { color: var(--accent); }
+      .value.next { color: var(--accent-2); }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        border-radius: 999px;
+        padding: 0 18px;
+        color: #07130d;
+        background: var(--accent);
+        text-decoration: none;
+        font-weight: 800;
+      }
+      a.button.secondary {
+        color: var(--text);
+        background: transparent;
+        border: 1px solid var(--border);
+      }
+      .section {
+        margin-top: 22px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: rgba(22,27,34,0.72);
+        padding: 22px;
+      }
+      .section h2 {
+        margin: 0 0 10px;
+        font-size: 1.25rem;
+      }
+      code {
+        color: var(--danger);
+        background: rgba(255,255,255,0.07);
+        border-radius: 6px;
+        padding: 0.1em 0.35em;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 28px 0 0;
+      }
+      @media (max-width: 560px) {
+        main { width: min(100% - 20px, 960px); padding: 20px 0; }
+        .hero { border-radius: 22px; }
+        .actions { flex-direction: column; }
+        a.button { justify-content: center; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">hm_game prototype pages</div>
+        <h1>AiayGround Pages</h1>
+        <p>
+          이 저장소는 <strong>빠른 검증용 웹 프로토타입을 외부 URL로 배포</strong>하기 위한 Pages 전용 공간입니다.
+          로컬 서버, WSL NAT, Windows 방화벽 설정 없이 브라우저에서 바로 열리는 테스트 페이지를 목표로 합니다.
+        </p>
+
+        <div class="status">
+          <div class="card">
+            <div class="label">Deploy target</div>
+            <div class="value ok">GitHub Pages</div>
+          </div>
+          <div class="card">
+            <div class="label">Current page</div>
+            <div class="value ok">Static test page</div>
+          </div>
+          <div class="card">
+            <div class="label">Next prototype</div>
+            <div class="value next">한 손 네크로 농장</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="button" href="./prototypes/one-hand-necro-farm/">프로토타입 슬롯 열기</a>
+          <a class="button secondary" href="./prototype.meta.json">메타데이터 보기</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>이 페이지가 검증하는 것</h2>
+        <p>
+          첫 목표는 게임 구현이 아니라 <code>AiayGround_Pages</code> 저장소가 GitHub Pages에서 정상 배포되는지 확인하는 것입니다.
+          이 페이지가 외부 브라우저와 모바일에서 열리면, 다음 단계로 실제 3x3 농장 선택 루프를 넣습니다.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>다음 작업</h2>
+        <p>
+          <code>prototypes/one-hand-necro-farm/</code> 경로에 “수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단을 만드는지” 확인하는
+          짧은 검증용 플레이 가능 프로토타입을 추가합니다.
+        </p>
+      </section>
+
+      <footer>
+        Generated for hm_game · <span id="stamp"></span>
+      </footer>
+    </main>
+    <script>
+      document.getElementById('stamp').textContent = new Date().toISOString().slice(0, 10);
+    </script>
+  </body>
+</html>

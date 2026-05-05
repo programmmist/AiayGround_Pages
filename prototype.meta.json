@@ -1,0 +1,16 @@
+{
+  "repo": "programmmist/AiayGround_Pages",
+  "purpose": "GitHub Pages host for fast browser-playable game prototype validation pages",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "current_candidate": {
+    "id": "one-hand-necro-farm",
+    "title": "한 손 네크로 농장",
+    "source_iteration": "iteration-live-001",
+    "validation_question": "수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단으로 느껴지는가?"
+  },
+  "hosting": {
+    "type": "github-pages",
+    "local_server_required": false,
+    "nat_or_portproxy_required": false
+  }
+}
