@@ -1,0 +1,33 @@
+{
+  "id": "boss-interview",
+  "title": "포켓 보스 인터뷰",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "source_iteration": "iteration-007",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "공격 대신 질문 카드로 보스의 거짓말/회피 패턴을 읽는 추론 루프가 5분 안에 재미 신호를 내는가?",
+  "initial_scope": {
+    "run_length": "one boss, 7 question turns",
+    "input": "select one of four question cards, then accuse when confident",
+    "core_choices": [
+      "which question extracts the clearest tell",
+      "whether to spend a turn gathering evidence or accuse now",
+      "which weakness to accuse"
+    ],
+    "result_signals": [
+      "questions asked",
+      "correct accusation",
+      "confidence score",
+      "contradictions found",
+      "turns remaining"
+    ]
+  },
+  "not_in_scope": [
+    "large card pool",
+    "LLM-generated dialogue",
+    "multiple bosses in one run",
+    "deckbuilding",
+    "meta progression",
+    "server telemetry"
+  ]
+}
