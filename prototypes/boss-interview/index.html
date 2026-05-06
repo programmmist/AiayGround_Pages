@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>포켓 보스 인터뷰 · AiayGround</title>
+    <meta name="description" content="질문 카드로 보스의 약점을 추론하는 브라우저 프로토타입" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section id="startScreen" class="screen screen-active panel start">
+        <p class="eyebrow">prototype 003 · deduction card loop</p>
+        <h1>포켓 보스 인터뷰</h1>
+        <p class="lead">전투 대신 <strong>질문 카드</strong>로 보스를 흔듭니다. 답변의 말투, 회피, 모순을 읽고 숨은 약점을 지목하세요.</p>
+        <div class="rules">
+          <div><span>목표</span> 7턴 안에 보스의 약점 하나를 맞히기</div>
+          <div><span>질문</span> 질문마다 약점별로 다른 단서/거짓말/반응 발생</div>
+          <div><span>검증</span> 텍스트 카드 추론이 랜덤 찍기가 아니라 읽는 재미를 주는가</div>
+        </div>
+        <button id="startButton" class="primary">인터뷰 시작</button>
+        <a class="secondary" href="./prototype.meta.json">메타데이터</a>
+      </section>
+
+      <section id="gameScreen" class="screen game">
+        <aside class="panel boss">
+          <p class="eyebrow">target boss</p>
+          <h2 id="bossName">보스</h2>
+          <p id="bossBio"></p>
+          <div class="meters">
+            <div><span>남은 턴</span><strong id="turnText">7</strong></div>
+            <div><span>압박</span><strong id="pressureText">0</strong></div>
+            <div><span>모순</span><strong id="contradictionText">0</strong></div>
+          </div>
+          <div class="weaknesses">
+            <button data-accuse="pride">자존심</button>
+            <button data-accuse="fear">두려움</button>
+            <button data-accuse="greed">탐욕</button>
+          </div>
+          <p class="hint">확신이 생기면 약점을 지목하세요. 틀리면 즉시 실패합니다.</p>
+        </aside>
+        <section class="panel table">
+          <div id="dialogue" class="dialogue"></div>
+          <div id="cards" class="cards"></div>
+          <div class="notes">
+            <h3>증거 메모</h3>
+            <ul id="evidenceList"></ul>
+          </div>
+        </section>
+      </section>
+
+      <section id="resultScreen" class="screen panel result">
+        <p class="eyebrow">interview report</p>
+        <h1 id="resultTitle">결과</h1>
+        <p id="resultSummary" class="lead"></p>
+        <div id="resultStats" class="stats"></div>
+        <pre id="resultJson"></pre>
+        <div class="actions">
+          <button id="retryButton" class="primary">다시 인터뷰</button>
+          <a class="secondary" href="../../">목록으로</a>
+        </div>
+      </section>
+    </main>
+    <script src="./game.js"></script>
+  </body>
+</html>

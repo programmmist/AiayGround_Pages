@@ -13,12 +13,13 @@ GitHub Pages 전용 저장소입니다.
 현재 슬롯:
 
 ```
+prototypes/boss-interview/        # 포켓 보스 인터뷰, prototype 003
 prototypes/polarity-salvage/      # 극성 폐품 회수선, prototype 002
-prototypes/one-hand-necro-farm/   # 한 손 네크로 농장, prototype 001, kept
+prototypes/one-hand-necro-farm/   # 한 손 네크로 농장, prototype 001
 ```
 
 최신 검증 질문:
 
 ```
-끌어당기기/밀어내기 극성 전환이 3분 동안 리스크-보상 판단을 계속 만들 수 있는가?
+공격 대신 질문 카드로 보스의 거짓말/회피 패턴을 읽는 추론 루프가 5분 안에 재미 신호를 내는가?
 ```
