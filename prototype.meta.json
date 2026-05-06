@@ -3,11 +3,19 @@
   "purpose": "GitHub Pages host for fast browser-playable game prototype validation pages",
   "source_system_repo": "programmmist/AIayGround_Hermes",
   "current_candidate": {
-    "id": "one-hand-necro-farm",
-    "title": "한 손 네크로 농장",
-    "source_iteration": "iteration-live-001",
-    "validation_question": "수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단으로 느껴지는가?"
+    "id": "polarity-salvage",
+    "title": "극성 폐품 회수선",
+    "source_iteration": "iteration-006",
+    "validation_question": "끌어당기기/밀어내기 극성 전환이 3분 동안 리스크-보상 판단을 계속 만들 수 있는가?"
   },
+  "kept_candidates": [
+    {
+      "id": "one-hand-necro-farm",
+      "title": "한 손 네크로 농장",
+      "source_iteration": "iteration-live-001",
+      "validation_question": "수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단으로 느껴지는가?"
+    }
+  ],
   "hosting": {
     "type": "github-pages",
     "local_server_required": false,
