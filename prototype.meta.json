@@ -3,12 +3,18 @@
   "purpose": "GitHub Pages host for fast browser-playable game prototype validation pages",
   "source_system_repo": "programmmist/AIayGround_Hermes",
   "current_candidate": {
-    "id": "rebirth-guild-manager",
-    "title": "환생 길드 매니저",
-    "source_iteration": "iteration-010",
-    "validation_question": "직접 전투보다 파티 편성/던전 배치/환생 특성 선택이 방치형 RPG의 “키우는 맛”을 더 선명하게 만드는가?"
+    "id": "blood-oath-idle",
+    "title": "혈맹의 탑",
+    "source_iteration": "iteration-011",
+    "validation_question": "리니지라이크의 자동사냥·장비강화·보스/혈맹 기여 경쟁이 짧은 세션에서도 “강화 한 번 더/층 한 번 더” 욕구를 만드는가?"
   },
   "kept_candidates": [
+    {
+      "id": "rebirth-guild-manager",
+      "title": "환생 길드 매니저",
+      "source_iteration": "iteration-010",
+      "validation_question": "직접 전투보다 파티 편성/던전 배치/환생 특성 선택이 방치형 RPG의 “키우는 맛”을 더 선명하게 만드는가?"
+    },
     {
       "id": "rebirth-raid-idle",
       "title": "오늘도 환생 원정대",

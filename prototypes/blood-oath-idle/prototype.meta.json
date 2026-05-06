@@ -1,0 +1,36 @@
+{
+  "id": "blood-oath-idle",
+  "title": "혈맹의 탑",
+  "source_iteration": "iteration-011",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "리니지라이크의 자동사냥·장비강화·보스/혈맹 기여 경쟁이 짧은 세션에서도 “강화 한 번 더/층 한 번 더” 욕구를 만드는가?",
+  "initial_scope": {
+    "run_length": "5-minute compressed Lineage-like idle RPG loop",
+    "input": "choose hunting floor, auto hunt, enchant weapon/armor, challenge boss, donate to clan buff",
+    "core_choices": [
+      "safe farm vs high floor push",
+      "weapon enchant risk",
+      "armor enchant safety",
+      "boss challenge timing",
+      "clan contribution vs personal growth"
+    ],
+    "result_signals": [
+      "highest floor",
+      "boss kills",
+      "enchant attempts",
+      "broken items",
+      "clan contribution",
+      "combat power"
+    ]
+  },
+  "not_in_scope": [
+    "real money gacha",
+    "real PvP",
+    "network multiplayer",
+    "lootbox monetization",
+    "large inventory",
+    "server persistence"
+  ]
+}
