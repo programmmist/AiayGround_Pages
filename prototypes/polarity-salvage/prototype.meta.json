@@ -1,0 +1,33 @@
+{
+  "id": "polarity-salvage",
+  "title": "극성 폐품 회수선",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "source_iteration": "iteration-006",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "끌어당기기/밀어내기 극성 전환이 3분 동안 리스크-보상 판단을 계속 만들 수 있는가?",
+  "initial_scope": {
+    "run_length_seconds": 180,
+    "input": "one-thumb drag for thrust, tap polarity button or Space to switch magnet mode",
+    "core_choices": [
+      "attract scrap to score quickly",
+      "repel shock mines before they hit",
+      "risk over-collecting while oxygen and hull run down"
+    ],
+    "result_signals": [
+      "scrap delivered",
+      "combo streak",
+      "polarity switches",
+      "mine hits",
+      "near-miss count",
+      "final score"
+    ]
+  },
+  "not_in_scope": [
+    "procedural map",
+    "upgrades/meta progression",
+    "multiple ship types",
+    "server-side telemetry",
+    "polished art/audio"
+  ]
+}

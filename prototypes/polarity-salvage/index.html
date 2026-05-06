@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>극성 폐품 회수선 · AiayGround</title>
+    <meta name="description" content="끌어당기기/밀어내기 극성 전환 검증용 브라우저 프로토타입" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section id="startScreen" class="screen screen-active panel start-panel">
+        <p class="eyebrow">prototype 002 · one-thumb browser game</p>
+        <h1>극성 폐품 회수선</h1>
+        <p class="lead">
+          낡은 궤도 잔해 지대에서 자석 회수선을 조종합니다. <strong>흡인</strong>으로 폐품을 빨리 모으고,
+          <strong>반발</strong>로 전격 지뢰를 밀어내세요. 3분 동안 극성 전환 판단이 계속 살아있는지 보는 검증용입니다.
+        </p>
+        <div class="howto">
+          <div><span>이동</span> 화면/마우스 드래그 방향으로 추력</div>
+          <div><span>극성</span> 버튼, Space, 또는 더블 탭으로 흡인/반발 전환</div>
+          <div><span>목표</span> 초록 폐품을 중앙 기지로 배달, 주황 지뢰는 피하거나 밀어내기</div>
+        </div>
+        <button id="startButton" class="primary">3분 회수 시작</button>
+        <a class="meta" href="./prototype.meta.json">prototype.meta.json</a>
+      </section>
+
+      <section id="gameScreen" class="screen game-screen">
+        <div class="hud panel">
+          <div><span>시간</span><strong id="timeText">03:00</strong></div>
+          <div><span>점수</span><strong id="scoreText">0</strong></div>
+          <div><span>선체</span><strong id="hullText">100</strong></div>
+          <div><span>화물</span><strong id="cargoText">0/5</strong></div>
+          <div><span>콤보</span><strong id="comboText">x1</strong></div>
+        </div>
+        <canvas id="gameCanvas" width="960" height="640" aria-label="극성 폐품 회수선 게임 화면"></canvas>
+        <div class="controls panel">
+          <button id="polarityButton" class="polarity attract">흡인</button>
+          <p id="hintText">초록 폐품을 끌어당겨 중앙 기지에 배달하세요.</p>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="screen panel result-panel">
+        <p class="eyebrow">run summary</p>
+        <h1 id="resultTitle">회수 종료</h1>
+        <p id="resultSummary" class="lead"></p>
+        <div id="resultStats" class="stats"></div>
+        <pre id="resultJson"></pre>
+        <div class="actions">
+          <button id="retryButton" class="primary">다시 3분</button>
+          <a class="secondary" href="../../">목록으로</a>
+        </div>
+      </section>
+    </main>
+    <script src="./game.js"></script>
+  </body>
+</html>

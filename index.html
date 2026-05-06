@@ -6,133 +6,11 @@
     <title>AiayGround Pages</title>
     <meta name="description" content="hm_game 검증용 웹 프로토타입 배포 페이지" />
     <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0e1117;
-        --panel: #161b22;
-        --panel-2: #1f2630;
-        --text: #e6edf3;
-        --muted: #9aa7b3;
-        --accent: #76e4a6;
-        --accent-2: #7cc7ff;
-        --danger: #ffb86b;
-        --border: rgba(255,255,255,0.1);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        background:
-          radial-gradient(circle at top left, rgba(118, 228, 166, 0.14), transparent 32rem),
-          radial-gradient(circle at bottom right, rgba(124, 199, 255, 0.12), transparent 30rem),
-          var(--bg);
-        color: var(--text);
-      }
-      main {
-        width: min(960px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 48px 0;
-      }
-      .hero {
-        border: 1px solid var(--border);
-        background: linear-gradient(145deg, rgba(22,27,34,0.92), rgba(31,38,48,0.86));
-        border-radius: 28px;
-        padding: clamp(24px, 5vw, 48px);
-        box-shadow: 0 28px 80px rgba(0,0,0,0.35);
-      }
-      .eyebrow {
-        color: var(--accent);
-        font-size: 0.9rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      h1 {
-        margin: 12px 0 12px;
-        font-size: clamp(2.2rem, 8vw, 5rem);
-        line-height: 0.95;
-      }
-      p {
-        color: var(--muted);
-        font-size: 1.08rem;
-        line-height: 1.7;
-      }
-      .status {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 12px;
-        margin: 28px 0;
-      }
-      .card {
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        background: rgba(255,255,255,0.035);
-        padding: 16px;
-      }
-      .label {
-        color: var(--muted);
-        font-size: 0.82rem;
-        margin-bottom: 8px;
-      }
-      .value {
-        color: var(--text);
-        font-size: 1.1rem;
-        font-weight: 700;
-      }
-      .value.ok { color: var(--accent); }
-      .value.next { color: var(--accent-2); }
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 30px;
-      }
-      a.button {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        border-radius: 999px;
-        padding: 0 18px;
-        color: #07130d;
-        background: var(--accent);
-        text-decoration: none;
-        font-weight: 800;
-      }
-      a.button.secondary {
-        color: var(--text);
-        background: transparent;
-        border: 1px solid var(--border);
-      }
-      .section {
-        margin-top: 22px;
-        border: 1px solid var(--border);
-        border-radius: 22px;
-        background: rgba(22,27,34,0.72);
-        padding: 22px;
-      }
-      .section h2 {
-        margin: 0 0 10px;
-        font-size: 1.25rem;
-      }
-      code {
-        color: var(--danger);
-        background: rgba(255,255,255,0.07);
-        border-radius: 6px;
-        padding: 0.1em 0.35em;
-      }
-      footer {
-        color: var(--muted);
-        font-size: 0.9rem;
-        text-align: center;
-        padding: 28px 0 0;
-      }
-      @media (max-width: 560px) {
-        main { width: min(100% - 20px, 960px); padding: 20px 0; }
-        .hero { border-radius: 22px; }
-        .actions { flex-direction: column; }
-        a.button { justify-content: center; width: 100%; }
-      }
+      :root { color-scheme: dark; --bg:#0e1117; --panel:#161b22; --panel2:#1f2630; --text:#e6edf3; --muted:#9aa7b3; --accent:#76e4a6; --accent2:#7cc7ff; --warn:#ffb86b; --border:rgba(255,255,255,.1); font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      *{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at top left,rgba(118,228,166,.14),transparent 32rem),radial-gradient(circle at bottom right,rgba(124,199,255,.12),transparent 30rem),var(--bg);color:var(--text)}
+      main{width:min(1040px,calc(100% - 32px));margin:0 auto;padding:48px 0}.hero,.section,.proto{border:1px solid var(--border);background:linear-gradient(145deg,rgba(22,27,34,.92),rgba(31,38,48,.82));border-radius:28px;box-shadow:0 28px 80px rgba(0,0,0,.35)}.hero{padding:clamp(24px,5vw,48px)}
+      .eyebrow{color:var(--accent);font-size:.9rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}h1{margin:12px 0;font-size:clamp(2.4rem,8vw,5.2rem);line-height:.95;letter-spacing:-.05em}p{color:var(--muted);font-size:1.05rem;line-height:1.7}.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:28px 0}.card{border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.035);padding:16px}.label{color:var(--muted);font-size:.82rem;margin-bottom:8px}.value{font-size:1.1rem;font-weight:800}.ok{color:var(--accent)}.next{color:var(--accent2)}
+      .section{margin-top:22px;padding:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:14px}.proto{padding:20px}.proto h3{margin:0 0 8px;font-size:1.35rem}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.tag{border:1px solid var(--border);border-radius:999px;padding:4px 9px;color:var(--muted);font-size:.8rem}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}a.button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;border-radius:999px;padding:0 16px;color:#07130d;background:var(--accent);text-decoration:none;font-weight:900}.proto.featured a.button{background:var(--accent2)}a.secondary{color:var(--text);background:transparent;border:1px solid var(--border)}code{color:var(--warn);background:rgba(255,255,255,.07);border-radius:6px;padding:.1em .35em}footer{color:var(--muted);font-size:.9rem;text-align:center;padding:28px 0 0}@media(max-width:560px){main{width:min(100% - 20px,1040px);padding:20px 0}.hero,.section,.proto{border-radius:22px}.actions{flex-direction:column}a.button{width:100%}}
     </style>
   </head>
   <body>
@@ -140,54 +18,40 @@
       <section class="hero">
         <div class="eyebrow">hm_game prototype pages</div>
         <h1>AiayGround Pages</h1>
-        <p>
-          이 저장소는 <strong>빠른 검증용 웹 프로토타입을 외부 URL로 배포</strong>하기 위한 Pages 전용 공간입니다.
-          로컬 서버, WSL NAT, Windows 방화벽 설정 없이 브라우저에서 바로 열리는 테스트 페이지를 목표로 합니다.
-        </p>
-
+        <p>빠른 검증용 웹 프로토타입을 외부 URL로 배포하는 Pages 전용 공간입니다. 기존 프로토타입은 보존하고, 새 후보를 별도 슬롯으로 계속 누적합니다.</p>
         <div class="status">
-          <div class="card">
-            <div class="label">Deploy target</div>
-            <div class="value ok">GitHub Pages</div>
-          </div>
-          <div class="card">
-            <div class="label">Current page</div>
-            <div class="value ok">Static test page</div>
-          </div>
-          <div class="card">
-            <div class="label">Next prototype</div>
-            <div class="value next">한 손 네크로 농장</div>
-          </div>
-        </div>
-
-        <div class="actions">
-          <a class="button" href="./prototypes/one-hand-necro-farm/">한 손 네크로 농장 플레이</a>
-          <a class="button secondary" href="./prototypes/one-hand-necro-farm/prototype.meta.json">프로토타입 메타데이터</a>
+          <div class="card"><div class="label">Deploy target</div><div class="value ok">GitHub Pages</div></div>
+          <div class="card"><div class="label">Prototype slots</div><div class="value ok">2 active</div></div>
+          <div class="card"><div class="label">Newest prototype</div><div class="value next">극성 폐품 회수선</div></div>
         </div>
       </section>
-
       <section class="section">
-        <h2>이 페이지가 검증하는 것</h2>
-        <p>
-          첫 목표는 게임 구현이 아니라 <code>AiayGround_Pages</code> 저장소가 GitHub Pages에서 정상 배포되는지 확인하는 것입니다.
-          이 페이지가 외부 브라우저와 모바일에서 열리면, 다음 단계로 실제 플레이 결과를 보고 수확/부패 선택의 판단 밀도를 조정합니다.
-        </p>
+        <h2>프로토타입 목록</h2>
+        <div class="grid">
+          <article class="proto featured">
+            <div class="eyebrow">new · prototype 002</div>
+            <h3>극성 폐품 회수선</h3>
+            <p>흡인으로 폐품을 빨리 모으고 반발로 전격 지뢰를 밀어내는 3분 생존/회수 루프.</p>
+            <div class="tags"><span class="tag">one-thumb</span><span class="tag">canvas</span><span class="tag">risk/reward</span></div>
+            <p><strong>검증 질문:</strong> 끌어당기기/밀어내기 극성 전환이 3분 동안 리스크-보상 판단을 계속 만들 수 있는가?</p>
+            <div class="actions"><a class="button" href="./prototypes/polarity-salvage/">플레이</a><a class="button secondary" href="./prototypes/polarity-salvage/prototype.meta.json">메타데이터</a></div>
+          </article>
+          <article class="proto">
+            <div class="eyebrow">kept · prototype 001</div>
+            <h3>한 손 네크로 농장</h3>
+            <p>수확할지 부패시켜 해골을 만들지 선택하는 3x3 농장/방어 루프. 요청대로 유지했습니다.</p>
+            <div class="tags"><span class="tag">one-hand</span><span class="tag">idle defense</span><span class="tag">kept</span></div>
+            <p><strong>검증 질문:</strong> 수확/부패 선택이 5분 동안 의미 있는 판단으로 느껴지는가?</p>
+            <div class="actions"><a class="button" href="./prototypes/one-hand-necro-farm/">플레이</a><a class="button secondary" href="./prototypes/one-hand-necro-farm/prototype.meta.json">메타데이터</a></div>
+          </article>
+        </div>
       </section>
-
       <section class="section">
-        <h2>다음 작업</h2>
-        <p>
-          <code>prototypes/one-hand-necro-farm/</code> 경로에 “수확할지 부패시킬지의 선택이 5분 동안 의미 있는 판단을 만드는지” 확인하는
-          짧은 검증용 플레이 가능 프로토타입을 추가합니다.
-        </p>
+        <h2>현재 판단</h2>
+        <p><code>극성 폐품 회수선</code>은 구현 비용 대비 입력 감각과 판단 밀도를 빨리 확인할 수 있어서 새 후보로 골랐습니다. 같은 자산 없이도 브라우저 물리/극성 피드백만으로 3분 루프가 성립하는지 바로 볼 수 있습니다.</p>
       </section>
-
-      <footer>
-        Generated for hm_game · <span id="stamp"></span>
-      </footer>
+      <footer>Generated for hm_game · <span id="stamp"></span></footer>
     </main>
-    <script>
-      document.getElementById('stamp').textContent = new Date().toISOString().slice(0, 10);
-    </script>
+    <script>document.getElementById('stamp').textContent = new Date().toISOString().slice(0,10);</script>
   </body>
 </html>
