@@ -1,0 +1,35 @@
+{
+  "id": "rebirth-guild-manager",
+  "title": "환생 길드 매니저",
+  "source_iteration": "iteration-010",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "직접 전투보다 파티 편성/던전 배치/환생 특성 선택이 방치형 RPG의 “키우는 맛”을 더 선명하게 만드는가?",
+  "initial_scope": {
+    "run_length": "5-minute compressed idle guild loop",
+    "input": "assign 3 heroes to lanes, upgrade roles, choose rebirth blessing",
+    "core_choices": [
+      "tank/dps/healer composition",
+      "farm safe dungeon or push raid",
+      "rebirth for guild fame now or continue farming",
+      "which permanent blessing to take"
+    ],
+    "result_signals": [
+      "rebirth count",
+      "raid clears",
+      "guild fame",
+      "highest dungeon",
+      "party wipes",
+      "blessing choice"
+    ]
+  },
+  "not_in_scope": [
+    "network MMO",
+    "manual combat",
+    "large roster gacha",
+    "inventory grid",
+    "offline save",
+    "server telemetry"
+  ]
+}

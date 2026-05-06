@@ -13,6 +13,7 @@ GitHub Pages 전용 저장소입니다.
 현재 슬롯:
 
 ```
+prototypes/rebirth-guild-manager/ # 환생 길드 매니저, prototype 006
 prototypes/rebirth-raid-idle/     # 오늘도 환생 원정대, prototype 005
 prototypes/loop-courier/          # 루프 택배 미궁, prototype 004
 prototypes/boss-interview/        # 포켓 보스 인터뷰, prototype 003
@@ -23,5 +24,5 @@ prototypes/one-hand-necro-farm/   # 한 손 네크로 농장, prototype 001
 최신 검증 질문:
 
 ```
-MMORPG식 사냥/장비 성장과 짧은 환생 보상이 5분 안에 “한 번 더 환생” 욕구를 만드는가?
+직접 전투보다 파티 편성/던전 배치/환생 특성 선택이 방치형 RPG의 “키우는 맛”을 더 선명하게 만드는가?
 ```
