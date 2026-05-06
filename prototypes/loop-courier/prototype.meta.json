@@ -1,0 +1,34 @@
+{
+  "id": "loop-courier",
+  "title": "루프 택배 미궁",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "source_iteration": "iteration-008",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "짧은 명령 루프를 짜고 실행 결과를 보며 수정하는 계획-관찰-수정 루프가 5분 안에 계속 재시도 욕구를 만드는가?",
+  "initial_scope": {
+    "run_length": "single 6x6 board, 8-command loop, repeatable attempts",
+    "input": "tap command buttons to build route, run simulation, reset/edit",
+    "core_choices": [
+      "which packages to prioritize",
+      "how to avoid moving guards",
+      "when to wait instead of moving",
+      "whether a partial delivery is good enough"
+    ],
+    "result_signals": [
+      "delivered packages",
+      "collisions",
+      "commands used",
+      "attempt count",
+      "best score"
+    ]
+  },
+  "not_in_scope": [
+    "level editor",
+    "multiple maps",
+    "undo timeline polish",
+    "procedural generation",
+    "server telemetry",
+    "art/audio polish"
+  ]
+}

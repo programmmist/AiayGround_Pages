@@ -3,12 +3,18 @@
   "purpose": "GitHub Pages host for fast browser-playable game prototype validation pages",
   "source_system_repo": "programmmist/AIayGround_Hermes",
   "current_candidate": {
-    "id": "boss-interview",
-    "title": "포켓 보스 인터뷰",
-    "source_iteration": "iteration-007",
-    "validation_question": "공격 대신 질문 카드로 보스의 거짓말/회피 패턴을 읽는 추론 루프가 5분 안에 재미 신호를 내는가?"
+    "id": "loop-courier",
+    "title": "루프 택배 미궁",
+    "source_iteration": "iteration-008",
+    "validation_question": "짧은 명령 루프를 짜고 실행 결과를 보며 수정하는 계획-관찰-수정 루프가 5분 안에 계속 재시도 욕구를 만드는가?"
   },
   "kept_candidates": [
+    {
+      "id": "boss-interview",
+      "title": "포켓 보스 인터뷰",
+      "source_iteration": "iteration-007",
+      "validation_question": "공격 대신 질문 카드로 보스의 거짓말/회피 패턴을 읽는 추론 루프가 5분 안에 재미 신호를 내는가?"
+    },
     {
       "id": "polarity-salvage",
       "title": "극성 폐품 회수선",
