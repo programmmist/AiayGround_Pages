@@ -3,12 +3,18 @@
   "purpose": "GitHub Pages host for fast browser-playable game prototype validation pages",
   "source_system_repo": "programmmist/AIayGround_Hermes",
   "current_candidate": {
-    "id": "loop-courier",
-    "title": "루프 택배 미궁",
-    "source_iteration": "iteration-008",
-    "validation_question": "짧은 명령 루프를 짜고 실행 결과를 보며 수정하는 계획-관찰-수정 루프가 5분 안에 계속 재시도 욕구를 만드는가?"
+    "id": "rebirth-raid-idle",
+    "title": "오늘도 환생 원정대",
+    "source_iteration": "iteration-009",
+    "validation_question": "MMORPG식 사냥/장비 성장과 짧은 환생 보상이 5분 안에 “한 번 더 환생” 욕구를 만드는가?"
   },
   "kept_candidates": [
+    {
+      "id": "loop-courier",
+      "title": "루프 택배 미궁",
+      "source_iteration": "iteration-008",
+      "validation_question": "짧은 명령 루프를 짜고 실행 결과를 보며 수정하는 계획-관찰-수정 루프가 5분 안에 계속 재시도 욕구를 만드는가?"
+    },
     {
       "id": "boss-interview",
       "title": "포켓 보스 인터뷰",

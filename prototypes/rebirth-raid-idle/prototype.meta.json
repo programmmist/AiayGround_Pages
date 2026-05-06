@@ -1,0 +1,35 @@
+{
+  "id": "rebirth-raid-idle",
+  "title": "오늘도 환생 원정대",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "source_iteration": "iteration-009",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "MMORPG식 사냥/장비 성장과 짧은 환생 보상이 5분 안에 “한 번 더 환생” 욕구를 만드는가?",
+  "initial_scope": {
+    "run_length": "accelerated 4-minute idle RPG loop",
+    "input": "choose hunt zone, buy upgrades, equip loot, rebirth when stuck",
+    "core_choices": [
+      "push higher zone for loot",
+      "farm lower zone for gold",
+      "buy permanent relic or temporary gear stat",
+      "rebirth now or squeeze one more boss"
+    ],
+    "result_signals": [
+      "rebirth count",
+      "highest zone",
+      "gear score",
+      "relic level",
+      "boss kills",
+      "time to first rebirth"
+    ]
+  },
+  "not_in_scope": [
+    "network MMO",
+    "real multiplayer",
+    "large inventory",
+    "skills tree",
+    "offline progress persistence",
+    "server telemetry"
+  ]
+}
