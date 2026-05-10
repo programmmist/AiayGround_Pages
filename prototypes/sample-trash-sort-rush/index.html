@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>분리수거 러시 · AiayGround</title>
+  <meta name="description" content="30초 동안 쓰레기를 올바른 통으로 빠르게 분류하는 브라우저 프로토타입" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="shell">
+    <section id="startScreen" class="screen screen-active panel start">
+      <p class="eyebrow">prototype 012 · one-finger sorting arcade</p>
+      <h1>분리수거 러시</h1>
+      <p class="lead">컨베이어에서 나오는 물건을 <strong>올바른 분리수거 통</strong>으로 보내세요. 30초 동안 콤보를 유지하면 속도와 점수가 같이 올라갑니다.</p>
+      <div class="rules">
+        <div><span>입력</span> 물건을 탭한 뒤 통을 탭하거나, 바로 통으로 드래그</div>
+        <div><span>핵심</span> 정확도와 속도 사이에서 판단하며 콤보를 유지</div>
+        <div><span>검증</span> 제한 시간·콤보·속도 상승만으로 즉시 재도전 욕구가 생기는가</div>
+      </div>
+      <button id="startButton" class="primary">30초 테스트 시작</button>
+      <a class="secondary" href="./prototype.meta.json">메타데이터</a>
+    </section>
+
+    <section id="gameScreen" class="screen game">
+      <section class="panel play-panel">
+        <div class="hud">
+          <div><span>시간</span><strong id="timeText">30.0</strong></div>
+          <div><span>점수</span><strong id="scoreText">0</strong></div>
+          <div><span>콤보</span><strong id="comboText">0</strong></div>
+          <div><span>최고</span><strong id="bestText">0</strong></div>
+        </div>
+        <div class="belt-wrap">
+          <div class="belt-label">컨베이어</div>
+          <div id="belt" class="belt"><div id="item" class="item" draggable="true" aria-label="현재 물건"></div></div>
+        </div>
+        <div id="feedback" class="feedback">물건을 보고 맞는 통을 선택하세요.</div>
+      </section>
+
+      <aside class="panel bins-panel">
+        <h2>분류 통</h2>
+        <div id="bins" class="bins">
+          <button class="bin" data-type="plastic"><span>♳</span><strong>플라스틱</strong></button>
+          <button class="bin" data-type="paper"><span>▤</span><strong>종이</strong></button>
+          <button class="bin" data-type="can"><span>◉</span><strong>캔</strong></button>
+          <button class="bin" data-type="glass"><span>◇</span><strong>유리</strong></button>
+        </div>
+        <div class="actions">
+          <button id="restartButton" class="secondary">즉시 재시작</button>
+          <a class="secondary" href="../../">목록으로</a>
+        </div>
+        <p class="hint">콤보 5마다 컨베이어가 빨라지고, 오답은 콤보와 시간을 잃습니다.</p>
+      </aside>
+    </section>
+
+    <section id="resultScreen" class="screen panel result">
+      <p class="eyebrow">sorting report</p>
+      <h1 id="resultTitle">결과</h1>
+      <p id="resultSummary" class="lead"></p>
+      <div id="resultStats" class="stats"></div>
+      <pre id="resultJson"></pre>
+      <div class="actions">
+        <button id="againButton" class="primary">다시 30초</button>
+        <a class="secondary" href="../../">목록으로</a>
+      </div>
+    </section>
+  </main>
+  <script src="./game.js"></script>
+</body>
+</html>
