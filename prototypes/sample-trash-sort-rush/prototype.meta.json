@@ -1,0 +1,32 @@
+{
+  "id": "sample-trash-sort-rush",
+  "title": "분리수거 러시",
+  "source_system_repo": "programmmist/AIayGround_Hermes",
+  "source_pages_repo": "programmmist/AiayGround_Pages",
+  "source_iteration": "sample-pass-revision-02",
+  "prototype_type": "browser-playable validation prototype",
+  "validation_question": "정확한 분류와 콤보 유지가 30초 안에 리듬감 있는 긴장을 만들고, 최고 콤보/점수 때문에 바로 재도전하고 싶게 만드는가?",
+  "initial_scope": {
+    "run_length": "single 30-second session with immediate restart",
+    "input": "tap or drag the current item into one of four bins",
+    "core_choices": [
+      "identify the waste type quickly",
+      "protect combo versus rushing",
+      "recover after mistakes before time expires"
+    ],
+    "result_signals": [
+      "score",
+      "accuracy",
+      "best combo",
+      "wrong answers",
+      "restart desire"
+    ]
+  },
+  "not_in_scope": [
+    "large item catalog",
+    "level progression",
+    "server telemetry",
+    "monetization",
+    "art/audio polish"
+  ]
+}

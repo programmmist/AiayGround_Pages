@@ -3,12 +3,18 @@
   "purpose": "GitHub Pages host for fast browser-playable game prototype validation pages",
   "source_system_repo": "programmmist/AIayGround_Hermes",
   "current_candidate": {
-    "id": "blood-oath-idle",
-    "title": "혈맹의 탑",
-    "source_iteration": "iteration-011",
-    "validation_question": "리니지라이크의 자동사냥·장비강화·보스/혈맹 기여 경쟁이 짧은 세션에서도 “강화 한 번 더/층 한 번 더” 욕구를 만드는가?"
+    "id": "sample-trash-sort-rush",
+    "title": "분리수거 러시",
+    "source_iteration": "sample-pass-revision-02",
+    "validation_question": "정확한 분류와 콤보 유지가 30초 안에 리듬감 있는 긴장을 만들고, 최고 콤보/점수 때문에 바로 재도전하고 싶게 만드는가?"
   },
   "kept_candidates": [
+    {
+      "id": "blood-oath-idle",
+      "title": "혈맹의 탑",
+      "source_iteration": "iteration-011",
+      "validation_question": "리니지라이크의 자동사냥·장비강화·보스/혈맹 기여 경쟁이 짧은 세션에서도 “강화 한 번 더/층 한 번 더” 욕구를 만드는가?"
+    },
     {
       "id": "rebirth-guild-manager",
       "title": "환생 길드 매니저",
